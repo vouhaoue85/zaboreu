@@ -1,4 +1,3 @@
-```yaml
 name: Run Model Training
 
 on:
@@ -60,7 +59,7 @@ jobs:
           await github.rest.actions.createWorkflowDispatch({
             owner: context.repo.owner,
             repo: context.repo.repo,
-            workflow_id: 'train-model.yml',
+            workflow_id: 'main.yml',  # Updated to match file name
             ref: 'main'
           });
       continue-on-error: true
