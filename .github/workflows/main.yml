@@ -11,7 +11,8 @@ on:
 jobs:
   train-model-1:
     runs-on: ubuntu-latest
-    timeout-minutes: 350
+    timeout-minutes: 5
+    continue-on-error: true
 
     steps:
     - name: Checkout code
@@ -46,7 +47,8 @@ jobs:
   train-model-2:
     needs: train-model-1
     runs-on: ubuntu-latest
-    timeout-minutes: 350
+    timeout-minutes: 5
+    continue-on-error: true
 
     steps:
     - name: Checkout code
@@ -81,7 +83,8 @@ jobs:
   train-model-3:
     needs: train-model-2
     runs-on: ubuntu-latest
-    timeout-minutes: 350
+    timeout-minutes: 5
+    continue-on-error: true
 
     steps:
     - name: Checkout code
@@ -116,7 +119,8 @@ jobs:
   train-model-4:
     needs: train-model-3
     runs-on: ubuntu-latest
-    timeout-minutes: 350
+    timeout-minutes: 5
+    continue-on-error: true
 
     steps:
     - name: Checkout code
@@ -151,7 +155,8 @@ jobs:
   train-model-5:
     needs: train-model-4
     runs-on: ubuntu-latest
-    timeout-minutes: 350
+    timeout-minutes: 5
+    continue-on-error: true
 
     steps:
     - name: Checkout code
@@ -186,7 +191,8 @@ jobs:
   train-model-6:
     needs: train-model-5
     runs-on: ubuntu-latest
-    timeout-minutes: 200
+    timeout-minutes: 5
+    continue-on-error: true
 
     steps:
     - name: Checkout code
